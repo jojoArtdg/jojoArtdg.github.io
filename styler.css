@@ -1,0 +1,396 @@
+    body{
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      
+        align-items: center;
+    }
+
+/* Estilos generales */
+.menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #5d0216;
+    font-weight: bold;
+    color: #ffe4c4;
+}
+
+.logo img {
+    height: 100px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.menu ul li {
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu ul li:hover {
+    background-color: #b81e4a;
+    color: white;
+}
+
+.menu ul li:active {
+    transform: scale(0.95); /* Efecto de clic */
+}
+
+/* Botón del menú (responsive) */
+.menu-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.menu-toggle:focus {
+    outline: none;
+}
+
+/* Estilo responsive */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+       position: absolute;
+        top: 60px;
+        right: 20px; 
+        flex-direction: column;
+        background-color: rgb(43, 7, 7);
+        box-shadow: 0 2px 10px rgba(255, 254, 254, 0.12);
+        border-radius: 5px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+}
+
+
+      /*incio portada*/
+  
+    
+      .portada {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh; /* Altura de la ventana completa */
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                          url('Imágenes/postre.jpg'); /* Añade una capa oscura */
+        background-size: cover; /* La imagen cubre todo el contenedor */
+        background-position: center; /* Centra la imagen */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        color: white; /* Texto blanco */
+        padding: 20px; /* Espaciado interno */
+        box-sizing: border-box; /* Incluye padding en el cálculo de dimensiones */
+    }
+    
+    h1 {
+        font-size: 3rem; /* Tamaño del título */
+        margin: 0 0 20px 0; /* Espaciado entre el título y el texto */
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para mejor visibilidad */
+    }
+    
+    h4 {
+        font-size: 1.2rem; /* Tamaño del subtítulo */
+        max-width: 800px; /* Ancho máximo del texto */
+        line-height: 1.5; /* Espaciado entre líneas */
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra para el texto */
+    }
+    
+    /* Media Query para pantallas más pequeñas */
+    @media (max-width: 768px) {
+        .portada {
+            height: auto; /* Ajusta la altura cuando el contenido sea mayor */
+            padding: 10px; /* Menos espacio en pantallas pequeñas */
+        }
+    
+        h1 {
+            font-size: 2rem; /* Reduce el tamaño del título */
+            margin: 0 0 10px 0; /* Menos espacio entre el título y el texto */
+        }
+    
+        h4 {
+            font-size: 1rem; /* Reduce el tamaño del subtítulo */
+            max-width: 100%; /* El subtítulo puede usar todo el ancho disponible */
+        }
+    }
+    
+    /* Media Query para pantallas muy pequeñas (como móviles en modo vertical) */
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 1.5rem; /* Reduce aún más el tamaño del título */
+        }
+    
+        h4 {
+            font-size: 0.9rem; /* Reduce el tamaño del subtítulo */
+        }
+    }
+    
+
+    
+     /* fin de portada */
+
+
+
+     /* inicio de contenedores 1 y 2 */
+
+.contenedor{
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   height: 400px;
+   background-color: aquamarine;
+}
+
+.contenedor1{
+    background-color:  #5d0216;
+    justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 50px;
+    color:  #ffe4c4;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+.contenedor2{
+    background-color: #ffe4c4;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+color: #5d0216;
+font-weight: bold;
+font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .contebnedor{
+        flex-direction: column;
+        height: auto;  
+    }
+    .contenedor1, .contenedor2{
+        width: 100%;
+        padding: 30px;
+        font-size: 18px;
+
+    }
+}
+@media (max-width: 480px) {
+    .contenedor1, .contenedor2 {
+        padding: 20px; 
+        font-size: 16px; 
+    }
+}
+
+/*accion */
+            .accion{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                height: 100vh; /* Altura de la ventana completa */
+                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                            url('Imágenes/Fondo2.jpg'); /* Añade una capa oscura */
+                background-size: cover; /* La imagen cubre todo el contenedor */
+                background-position: center; /* Centra la imagen */
+                background-repeat: no-repeat; /* Evita que la imagen se repita */
+                color: white; /* Texto blanco */
+                padding: 20px; /* Espaciado interno */
+                box-sizing: border-box;
+                font-weight: bold;
+                font-size: 20px;   
+               
+
+            }
+
+            button{
+                background-color: rgba(255, 255, 255, 0.638);
+        border-radius: 40px;
+        height: 50px;
+        width: 300px;
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.3s, color 0.3s;
+        
+            }
+
+            button:hover{
+                background-color:rgb(43, 7, 7);
+                color: rgb(255, 255, 255);
+                width: 280px;
+                font-size: 14px;
+        }
+
+        @media screen and (max-width: 768px){
+            button{
+                width: auto;
+                font-size: 10px;
+
+            }
+        }
+
+            /* fin de accion */
+
+
+            /*inicio de recetas*/
+
+            .recetas{
+                display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 20px; /* Espaciado entre los div internos */
+    background-color: #fffcf8;
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados opcionales */
+        
+            }
+            
+         .receta {
+    display: flex;
+    align-items: center; /* Alinea verticalmente imagen y texto */
+    gap: 15px; /* Espaciado entre imagen y texto */
+    background-color: white; /* Fondo blanco para cada receta */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.receta img {
+    width: 100px; /* Ancho de la imagen */
+    height: 100px; /* Alto de la imagen */
+    object-fit: cover; /* Ajusta la imagen al espacio */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+}
+
+.receta .texto h3 {
+    margin: 0; /* Elimina el margen superior */
+    font-size: 50px;
+    color: #333; /* Color del texto */
+   
+}
+
+.receta .texto p {
+    margin: 5px 0 0 0; /* Margen superior pequeño */
+    font-size: 16px;
+    color: #666; /* Color del texto */
+   
+}
+ /*contactos*/
+.CONTACTO{
+    display: flex;
+    justify-content: space-between;
+   
+    height: 100px;
+    height: 50vh; /* Altura de la ventana completa */
+                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                            url('Imágenes/restaurante.jpg'); /* Añade una capa oscura */
+                background-size: cover; /* La imagen cubre todo el contenedor */
+                background-position: center; /* Centra la imagen */
+                background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.CONTACTO1{
+    background-color: #5d0216;
+    justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 50px;
+    color:  #ffe4c4;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.CONTACTO2{
+    background-color: #ffe4c4;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+color #5d0216;
+font-weight: bold;
+font-size: 20px;
+}
+
+.CONTACTO button{
+    margin-top: 250px;
+}
+
+
+@media screen and  (max-width: 768px) {
+    .CONTACTO{
+        flex-direction: column;
+        height: auto;  
+    }
+    .CONTACTO1, .CONTACTO2{
+        width: 88%;
+        padding: 30px;
+        font-size: 18px;  
+    
+}
+}
+
+
+@media screen and (max-width: 768px){
+    .CONTACTO button{
+        display: none;
+        width: auto;
+        font-size: 10px;
+
+    }
+}
+/* fin contacto*/
+
+
+.footer {
+    background-color: #1c1c1c; /* Negro grisáceo */
+    color: #bfbfbf; /* Gris claro para el texto */
+    text-align: center; /* Centra el texto */
+    padding: 20px 10px; /* Espaciado interno */
+    font-size: 0.9rem; /* Tamaño del texto */
+    border-top: 1px solid #333; /* Línea sutil en la parte superior */
+}
+
+.footer p {
+    margin: 0; /* Elimina márgenes */
+    line-height: 1.5; /* Espaciado entre líneas */
+}
+
+@media screen and (max-width: 768px) {
+    footer{
+        width: 96.5%;
+        padding: 30px;
+        font-size: 18px;  
+    }
+}
+
+
